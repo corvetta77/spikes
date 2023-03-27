@@ -7,7 +7,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class RandomTest {
+class RandomEvenOrOddTest {
 
     private Random underTest;
     private List<String> registeredServers = List.of("ip1", "ip2");

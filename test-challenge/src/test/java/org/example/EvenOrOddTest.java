@@ -4,15 +4,16 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-class InterviewTest {
+class EvenOrOddTest {
 
-    private Test underTest;
+    private EvenOrOdd underTest;
 
     @BeforeEach
     void setUp() {
-        underTest = new Test();
+        underTest = new EvenOrOdd();
     }
 
     @Test

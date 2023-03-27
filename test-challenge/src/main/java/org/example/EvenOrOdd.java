@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 import static java.util.stream.IntStream.range;
 
-public class Test {
+public class EvenOrOdd {
 
     public static void main(String[] args) throws InterruptedException {
 

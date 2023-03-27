@@ -5,23 +5,20 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
-class RoundRobinTest {
-
-    private RoundRobin underTest;
+class RoundRobin2EvenOrOddTest {
+    private RoundRobin2 underTest;
     private List<String> registeredServers = List.of("ip1", "ip2");
 
     @BeforeEach
     void setUp() {
-        underTest = new RoundRobin(registeredServers);
+        underTest = new RoundRobin2(registeredServers);
     }
 
     @Test
-    void testRoundRobinLb() {
+    void testRoundRobin() {
         long milis = System.currentTimeMillis();
-
         String result1 = underTest.getServer("clientIp");
         assertTrue(registeredServers.contains(result1));
 
@@ -30,6 +27,6 @@ class RoundRobinTest {
 
         assertNotEquals(result1, result2);
         System.out.println(System.currentTimeMillis() - milis);
-
     }
+
 }
